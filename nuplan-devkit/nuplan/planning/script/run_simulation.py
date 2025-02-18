@@ -3,7 +3,8 @@ import os
 from pathlib import Path
 from shutil import rmtree
 from typing import List, Optional, Union
-
+import sys
+sys.path.append("c:\\Users\\hbwal\\Desktop\\Hans the Awesome\\Research\\Self driving\\PDM_Carla\\nuplan-devkit")
 import hydra
 import pytorch_lightning as pl
 from omegaconf import DictConfig, OmegaConf

@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug NuPlan Simulation",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/nuplan/planning/script/run_simulation.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "+simulation=closed_loop_reactive_agents",
+                "planner=pdm_hybrid_planner",
+                "planner.pdm_hybrid_planner.checkpoint_path=/path/to/checkpoint.ckpt",
+                "scenario_filter=val14_split",
+                "scenario_builder=nuplan",
+                "hydra.searchpath=[pkg://tuplan_garage.planning.script.config.common, pkg://tuplan_garage.planning.script.config.simulation, pkg://nuplan.planning.script.config.common, pkg://nuplan.planning.script.experiments]"
+            ],
+            "env": {
+                "NUPLAN_DEVKIT_ROOT": "nuplan-devkit"
+            }
+        }
+    ]
+}
